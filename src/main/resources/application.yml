@@ -1,0 +1,16 @@
+server:
+  port: 8182
+
+spring:
+  application:
+    name: resource-service
+
+eureka:
+  client:
+    #flags set to true in order to register the resource-service in eureka server as a microservice
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceURL:
+      defaultZone: http://localhost:8661/eureka
+    instance:
+      hostname: localhost
